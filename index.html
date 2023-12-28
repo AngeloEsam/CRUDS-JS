@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body >
+    <div class="w-75 mx-auto my-5 " >
+        <div class="form-group">
+            <label for="productName">productName:</label>
+            <input class="my-2 form-control" type="text" name="" id="productName">
+            <small class="text-muted">productName must be chars only and start with uppercase</small>
+        </div>
+        <div class="form-group">
+            <label for="productPrice">productPrice:</label>
+            <input class="my-2 form-control" type="number"  id="productPrice">
+            <small class="text-muted">Price must be numbers only and range from 1000 to 10000</small>
+        </div>
+        <div class="form-group">
+            <label for="productCategory">productCategory:</label>
+            <input class="my-2 form-control" type="text"  id="productCategory">
+            <small class="text-muted">productCategory must be chars only</small>
+        </div>
+        <div class="form-group">
+            <label for="productDesc">productDesc:</label>
+            <textarea class="my-2 form-control"  id="productDesc" ></textarea>
+            <small class="text-muted">productDesc must be chars only</small>
+        </div>
+        <button class="btn btn-outline-info my-2" id="btn">add product</button>
+        
+    </div >
+    <div class="w-75 mx-auto">
+        <input onkeyup="searchProduct(this.value)" class="form-control mb-4 w-75 mx-auto " placeholder="Search by Name">
+    </div>
+    <div class="w-75 my-5 mx-auto">
+        <table class="table table-striped">
+            <thead>
+                    <th></th>              
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Category</th>
+                    <th>Description</th>  
+                    <th>Update</th>       
+                    <th>Delete</th>
+    
+            </thead>
+            <tbody id="tableBody">
+               
+            </tbody>
+        </table> 
+    </div>
+    
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
